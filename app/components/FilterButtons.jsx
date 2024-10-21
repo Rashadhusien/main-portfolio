@@ -9,18 +9,18 @@ import { myProjects } from "../data/projects";
 import { motion } from "framer-motion";
 
 const FilterButtons = ({ setArr }) => {
-  const [isActive, setIsActive] = useState("all");
+  // const [isActive, setIsActive] = useState("all");
 
-  const handleClick = (category) => {
-    setIsActive(category);
-    const mycategory = myProjects.filter((project) =>
-      project.category.includes(category)
-    );
-    setArr(mycategory);
-  };
+  // const handleClick = (category) => {
+  //   setIsActive(category);
+  //   const mycategory = myProjects.filter((project) =>
+  //     project.category.includes(category)
+  //   );
+  //   setArr(mycategory);
+  // };
   return (
     <section className="left-section grid gap-3 grid-cols-2 sm:flex w-full sm:w-auto flex-wrap justify-center items-center sm:flex-col">
-      <button
+      {/* <button
         onClick={() => {
           setIsActive("all");
           setArr(myProjects);
@@ -52,7 +52,7 @@ const FilterButtons = ({ setArr }) => {
         >
           {btn.displayName}
         </button>
-      ))}
+      ))} */}
     </section>
   );
 };

@@ -5,7 +5,7 @@ import { CldImage } from "next-cloudinary";
 const ProjectsCard = ({ arr }) => {
   return (
     <section className="group right-section relative grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 w-full gap-1 md:gap-10">
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {arr.length === 0 ? (
           <p className="text-5xl w-full absolute text-center h-full py-10">
             No projects available.
@@ -35,7 +35,7 @@ const ProjectsCard = ({ arr }) => {
             </motion.article>
           ))
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </section>
   );
 };
