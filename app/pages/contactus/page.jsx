@@ -120,7 +120,7 @@ function ContactUs() {
             </h1>
           )}
         </form>
-        <section className="contact-animation hidden sm:block animation max-w-sm ">
+        <section className="contact-animation hidden sm:block animation max-w-lg ">
           <Lottie animationData={contactAnimation} className="w-full h-full" />
         </section>
       </section>

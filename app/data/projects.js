@@ -12,8 +12,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css"],
-
-    imgUrl: "/htmlandcssone.png",
+    imgUrl: "htmlandcssone_jbce1f",
     heading: "HTML_And_CSS_Template-One",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -25,7 +24,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
 
-    imgUrl: "/htmlandcsstwo.png",
+    imgUrl: "htmlandcsstwo_kz45o6",
     heading: "HTML And CSS Template Two",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -37,7 +36,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
 
-    imgUrl: "/qrcode.png",
+    imgUrl: "qrcode_ckchiz",
     heading: "Qrcode",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -48,7 +47,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css"],
-    imgUrl: "/threecolumns.png",
+    imgUrl: "threecolumns_gcimpv",
     heading: "3-column preview cards",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -59,7 +58,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css"],
-    imgUrl: "/gabrielle.png",
+    imgUrl: "gabrielle_erlrun",
     heading: "product preview card component main",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -72,7 +71,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css"],
-    imgUrl: "/iconlinks.png",
+    imgUrl: "iconlinks_nbob66",
     heading: "social links profile",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -83,7 +82,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css"],
-    imgUrl: "/htmlcsscard.png",
+    imgUrl: "htmlcsscard_g8vgtl",
     heading: "preview card main",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -94,7 +93,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css"],
-    imgUrl: "/summary.png",
+    imgUrl: "ordersummerycard_eilbqv",
     heading: "order summary component main",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -105,7 +104,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css"],
-    imgUrl: "/htmlandcssthree.png",
+    imgUrl: "htmlandcssthree_brfupx",
     heading: "HTML and CSS Template Three",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -116,7 +115,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css"],
-    imgUrl: "/fylo.png",
+    imgUrl: "fylo_kg9fja",
     heading: "fylo data storage component",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -129,7 +128,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css"],
-    imgUrl: "/huddle.png",
+    imgUrl: "huddle_ahluop",
     heading: "huddle landing page",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -142,7 +141,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css", "tailwind"],
-    imgUrl: "/designtailwind.png",
+    imgUrl: "designtailwind_jtpcur",
     heading: "Design Tailwind",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -153,7 +152,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css", "JavaScript"],
-    imgUrl: "/guessThewordGame.png",
+    imgUrl: "guessThewordGame_opwl3x",
     heading: "Guess The Word Game",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -164,7 +163,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["reactjs", "JavaScript"],
-    imgUrl: "/prayertimings.png",
+    imgUrl: "prayertimings_jmphlx",
     heading: "prayers-timings",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -175,7 +174,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css", "JavaScript"],
-    imgUrl: "/faq.png",
+    imgUrl: "faq_mckcxq",
     heading: "faq-accordion-main",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -186,7 +185,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css", "JavaScript", "tailwind"],
-    imgUrl: "/socialDashBoard.png",
+    imgUrl: "socialDashBoard_jexbh3",
     heading: "social-media-dashboard",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -199,7 +198,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css"],
-    imgUrl: "/four-cards.png",
+    imgUrl: "four-cards_ogjzmk",
     heading: "four-card-feature",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -211,7 +210,7 @@ export const myProjects = [
   {
     id: uuid(),
     category: ["html&css"],
-    imgUrl: "/privewCard.png",
+    imgUrl: "privewCard_nmmx65",
     heading: "Privew Card",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
@@ -221,8 +220,8 @@ export const myProjects = [
   },
   {
     id: uuid(),
-    category: ["nextjs", "JavaScript", "tailwind"],
-    imgUrl: "/linkDesign.png",
+    category: ["nextjs", "JavaScript", "tailwind", "reactjs"],
+    imgUrl: "linkDesign_ocpwsw",
     heading: "Link Design",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",

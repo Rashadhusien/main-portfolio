@@ -3,33 +3,11 @@
 import Link from "next/link";
 import "./style.css";
 import { useEffect, useState } from "react";
+import { navBar } from "@/app/data/navBar";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState("dark"); // default theme is 'dark'
-
-  const navBar = [
-    {
-      url: "/",
-      name: "Home",
-    },
-    {
-      url: "about",
-      name: "About Us",
-    },
-    {
-      url: "contactus",
-      name: "Contact Us",
-    },
-    {
-      url: "projects",
-      name: "projects",
-    },
-    {
-      url: "skills",
-      name: "skills",
-    },
-  ];
 
   useEffect(() => {
     // Only run on client
@@ -84,7 +62,7 @@ function Header() {
               className="border-b py-3 border-border dark:border-borderlight hover:pl-1 duration-300"
             >
               <Link
-                href={`/pages/${item.url}`}
+                href={item.url != "/" ? `/pages/${item.url}` : item.url}
                 className="hover:text-blueElzero text-titlelight dark:text-title dark:hover:text-orange transition-all duration-300 text-xl w-full block"
               >
                 {item.name.charAt(0).toUpperCase() + item.name.slice(1)}

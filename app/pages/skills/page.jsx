@@ -72,10 +72,6 @@ const Skills = () => {
   const calculateAnimationDelay = (index, total) =>
     `calc(30s / ${total} * (${total} - ${index + 1}) * -1)`;
 
-  // animationDelay: `calc(30s / ${leftSkills.length / 2} * (${halfLength} -  ${
-  //   i + 1
-  // }) * -1)`;
-
   return (
     <>
       <SectionTitle title={"skills"} />
@@ -112,7 +108,7 @@ const Skills = () => {
                 left: `max(calc(200px * ${leftSkills.length} )`,
               }}
             >
-              <Image width={500} height={500} src={url} alt={name} />
+              <Image fill={true} src={url} alt={name} unoptimized={true} />
             </div>
           );
         })}

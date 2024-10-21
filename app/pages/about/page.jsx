@@ -2,8 +2,6 @@
 import Lottie from "lottie-react";
 import developer from "../../animation/developer.json";
 
-
-
 import { useRef, useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -76,7 +74,7 @@ function About() {
         <div className="text">
           <motion.h1
             initial={{ opacity: 0 }}
-            className="title text-5xl leading-[70px] font-bold my-6 text-primary dark:text-primarylight max-w-[580px]"
+            className="title text-5xl leading-[70px] font-[900] my-6 text-primary dark:text-primarylight max-w-[580px]"
             animate={{ opacity: 1 }}
             transition={{ duration: 3 }}
           >
@@ -94,7 +92,7 @@ function About() {
               </motion.span>
             ))}
           </motion.h1>
-          <p className="sub-title mb-8 text-sub-title-light dark:text-subtitle">
+          <p className="sub-title mb-8 text-sub-title-light dark:text-subtitle font-bold]">
             I’m Rashad Husein, a Front-End Developer and entrepreneur based in
             Cairo City. I’m a Front End Developer and Freelancer, where we
             develop technologies that empower regular people to explore space on
