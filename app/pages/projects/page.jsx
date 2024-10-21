@@ -6,7 +6,7 @@ import FilterButtons from "@/app/components/FilterButtons";
 import ProjectsCard from "@/app/components/ProjectsCard";
 
 function Projects() {
-  // const [arr, setArr] = useState(myProjects);
+  const [arr, setArr] = useState(myProjects);
 
   return (
     <>
@@ -15,9 +15,9 @@ function Projects() {
         className="flex gap-12 items-start flex-col sm:flex-row"
         id="project"
       >
-        {/* <FilterButtons setArr={setArr} /> */}
+        <FilterButtons setArr={setArr} />
 
-        {/* <ProjectsCard arr={arr} /> */}
+        <ProjectsCard arr={arr} />
       </main>
     </>
   );
