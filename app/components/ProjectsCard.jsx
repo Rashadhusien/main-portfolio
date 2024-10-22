@@ -15,7 +15,7 @@ const ProjectsCard = ({ arr }) => {
     <section className=" right-section relative grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 w-full gap-1 md:gap-10">
       <AnimatePresence>
         {arr.length === 0 ? (
-          <p className="text-5xl w-full absolute text-center h-full py-10">
+          <p className="text-5xl w-full absolute text-center h-full py-10 dark:text-white text-black">
             No projects available.
           </p>
         ) : (

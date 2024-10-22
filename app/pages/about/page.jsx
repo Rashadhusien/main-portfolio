@@ -14,7 +14,7 @@ function About() {
   const [jopTitle, setJopTitle] = useState("");
 
   // Image source
-  const profile = "/profile-rm.png";
+  const profile = "/profile.png";
 
   // Set job title after component mounts to prevent hydration issues
   useEffect(() => {
