@@ -1,3 +1,4 @@
+"use client";
 import "./style.css";
 import { motion } from "framer-motion";
 

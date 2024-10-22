@@ -14,7 +14,9 @@ html {
 
 body {
   position: relative;
+  background-color: #030712;
 }
+
 /* handle scroll bar */
 
 ::-webkit-scrollbar {
