@@ -1,19 +1,19 @@
-import Image from "next/image";
-import "./skillsStyle.css";
-import { skillsData } from "@/app/data/skillsData";
-import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
+// import Image from "next/image";
+// import "./skillsStyle.css";
+// import { skillsData } from "@/app/data/skillsData";
+// import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
 
 const Skills = () => {
-  const halfLength = Math.ceil(skillsData.length / 2);
-  const leftSkills = skillsData.slice(0, halfLength);
-  const rightSkills = skillsData.slice(halfLength);
+  // const halfLength = Math.ceil(skillsData.length / 2);
+  // const leftSkills = skillsData.slice(0, halfLength);
+  // const rightSkills = skillsData.slice(halfLength);
 
-  const calculateAnimationDelay = (index, total) =>
-    `calc(30s / ${total} * (${total} - ${index + 1}) * -1)`;
+  // const calculateAnimationDelay = (index, total) =>
+  //   `calc(30s / ${total} * (${total} - ${index + 1}) * -1)`;
 
   return (
     <>
-      <SectionTitle title={"skills"} />
+      {/* <SectionTitle title={"skills"} />
 
       <div className="wrapper">
         {skillsData.slice(0, skillsData.length / 2).map((skill, i) => {
@@ -52,7 +52,7 @@ const Skills = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </>
   );
 };
