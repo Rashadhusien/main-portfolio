@@ -1,7 +1,7 @@
 // import Image from "next/image";
 // import "./skillsStyle.css";
 // import { skillsData } from "@/app/data/skillsData";
-// import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
+import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
 
 const Skills = () => {
   // const halfLength = Math.ceil(skillsData.length / 2);
@@ -13,9 +13,9 @@ const Skills = () => {
 
   return (
     <>
-      {/* <SectionTitle title={"skills"} />
+      <SectionTitle title={"skills"} />
 
-      <div className="wrapper">
+      {/*<div className="wrapper">
         {skillsData.slice(0, skillsData.length / 2).map((skill, i) => {
           const { id, name, url } = skill;
           return (
