@@ -3,9 +3,10 @@ import Hero from "./pages/about/page";
 
 import { useEffect, useState } from "react";
 import Main from "./pages/projects/page";
-import Skills from "./pages/skills/page";
 import Contact from "./pages/contactus/page";
 import { motion, useScroll, useSpring } from "framer-motion";
+
+// import Skills from "./pages/skills/page";
 
 export default function Home() {
   useEffect(() => {
@@ -36,9 +37,11 @@ export default function Home() {
 
       <Hero />
       <div className="border-b border-borderlight dark:border-border my-12 w-[200%] -ml-16" />
-      <Skills />
+      {/*
+        
+       <Skills /> 
       <div className="border-b border-borderlight dark:border-border my-12 w-[200%] -ml-16" />
-
+*/}
       <Main />
       <div className="border-b border-borderlight dark:border-border my-12 w-[200%] -ml-16" />
       <Contact />

@@ -7,7 +7,7 @@ import { navBar } from "@/app/data/navBar";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState("dark"); // default theme is 'dark'
+  const [theme, setTheme] = useState("dark"); 
 
   useEffect(() => {
     // Only run on client
