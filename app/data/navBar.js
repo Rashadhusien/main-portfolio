@@ -15,8 +15,8 @@ export const navBar = [
     url: "projects",
     name: "projects",
   },
-  // {
-  //   url: "skills",
-  //   name: "skills",
-  // },
+  {
+    url: "skills",
+    name: "skills",
+  },
 ];
