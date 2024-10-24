@@ -7,7 +7,6 @@ import doneAnimation from "@/app/animation/done.json";
 
 import contactAnimation from "@/app/animation/contact-us.json";
 
-import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
 
 import { useState } from "react";
 
@@ -22,7 +21,7 @@ function ContactUs() {
 
   return (
     <section className="contact-us" id="contact">
-      <SectionTitle title={"contact"} />
+      
       <div className="content-text mb-5">
         <h3 className=" text-titlelight dark:text-title text-3xl font-bold mb-3 flex items-center gap-4">
           <span className="icon-envelope text-sub-title-light dark:text-subtitle text-2xl" />{" "}

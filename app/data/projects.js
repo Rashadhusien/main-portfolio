@@ -13,7 +13,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
     imgUrl: "htmlandcssone_jbce1f",
-    heading: "HTML_And_CSS_Template-One",
+    title: "HTML & CSS template",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -25,7 +25,7 @@ export const myProjects = [
     category: ["html&css"],
 
     imgUrl: "htmlandcsstwo_kz45o6",
-    heading: "HTML And CSS Template Two",
+    title: "HTML & CSS template 2",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -37,7 +37,7 @@ export const myProjects = [
     category: ["html&css"],
 
     imgUrl: "qrcode_ckchiz",
-    heading: "Qrcode",
+    title: "Qrcode",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -48,7 +48,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
     imgUrl: "threecolumns_gcimpv",
-    heading: "3-column preview cards",
+    title: "3 column preview cards",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -59,7 +59,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
     imgUrl: "gabrielle_erlrun",
-    heading: "product preview card component main",
+    title: "product preview card",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -72,7 +72,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
     imgUrl: "iconlinks_nbob66",
-    heading: "social links profile",
+    title: "social links profile",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -83,7 +83,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
     imgUrl: "htmlcsscard_g8vgtl",
-    heading: "preview card main",
+    title: "preview card main",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -94,7 +94,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
     imgUrl: "ordersummerycard_eilbqv",
-    heading: "order summary component main",
+    title: "order summary ",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -105,7 +105,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
     imgUrl: "htmlandcssthree_brfupx",
-    heading: "HTML and CSS Template Three",
+    title: "HTML & CSS Template Three",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -116,7 +116,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
     imgUrl: "fylo_kg9fja",
-    heading: "fylo data storage component",
+    title: "data storage component",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -129,7 +129,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
     imgUrl: "huddle_ahluop",
-    heading: "huddle landing page",
+    title: "huddle landing page",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -142,7 +142,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css", "tailwind"],
     imgUrl: "designtailwind_jtpcur",
-    heading: "Design Tailwind",
+    title: "Tailwind Css Design",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -153,7 +153,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css", "JavaScript"],
     imgUrl: "guessThewordGame_opwl3x",
-    heading: "Guess The Word Game",
+    title: "Guess The Word Game",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -164,7 +164,7 @@ export const myProjects = [
     id: uuid(),
     category: ["reactjs", "JavaScript"],
     imgUrl: "prayertimings_jmphlx",
-    heading: "prayers-timings",
+    title: "prayers timings",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -175,7 +175,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css", "JavaScript"],
     imgUrl: "faq_mckcxq",
-    heading: "faq-accordion-main",
+    title: "faq accordion ",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -186,7 +186,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css", "JavaScript", "tailwind"],
     imgUrl: "socialDashBoard_jexbh3",
-    heading: "social-media-dashboard",
+    title: "social media dashboard",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -199,7 +199,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
     imgUrl: "four-cards_ogjzmk",
-    heading: "four-card-feature",
+    title: "four card feature",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -211,7 +211,7 @@ export const myProjects = [
     id: uuid(),
     category: ["html&css"],
     imgUrl: "privewCard_nmmx65",
-    heading: "Privew Card",
+    title: "Privew Card",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -222,7 +222,7 @@ export const myProjects = [
     id: uuid(),
     category: ["nextjs", "JavaScript", "tailwind", "reactjs"],
     imgUrl: "linkDesign_ocpwsw",
-    heading: "Link Design",
+    title: "Link Design",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",

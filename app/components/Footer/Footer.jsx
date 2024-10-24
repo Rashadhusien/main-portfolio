@@ -3,8 +3,8 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="flex justify-between pb-12 flex-col sm:flex-row items-center gap-3 sm:gap-0 mt-10">
-      <ul className="flex gap-4">
+    <footer className="flex  justify-between py-5 flex-col px-10  sm:flex-row items-center gap-3 sm:gap-0  bg-seconderylight dark:bg-secondery">
+      <ul className="flex gap-4 text-center">
         {navBar.map((nav, i) => {
           return (
             <li key={i}>
@@ -19,14 +19,14 @@ function Footer() {
         })}
       </ul>
       <p className="text-textfooter capitalize">
-        made with love by
+        made with &lt;3 by
         <a
           href="mailto:rashadhusein440@gmail.com"
-          className="text-blueElzero dark:text-orange"
+          className="text-blueElzero dark:text-orange px-1"
         >
           rashad
         </a>
-        © 2024
+        © 2025
       </p>
     </footer>
   );

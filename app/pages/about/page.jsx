@@ -60,7 +60,7 @@ function About() {
             }}
           />
           {imgpopup && (
-            <div className="img-popup fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full h-full bg-popupMenu backdrop-blur duration-1000">
+            <div className="img-popup fixed  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-full h-full bg-popupMenu backdrop-blur duration-1000">
               <Image
                 src={profile}
                 alt="me-main-section"

@@ -14,13 +14,14 @@ html {
 
 body {
   position: relative;
-  background-color: #030712;
+  background-color: #18181b;
 }
 
 /* handle scroll bar */
 
 ::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -86,6 +87,44 @@ body {
 }
 
 /* animation scale img  */
+
+/*  */
+
+.btns-div button {
+  flex: 0 0 200px;
+  background: var(--accent);
+  margin: 0 20px 0 0;
+}
+
+.btns-div button:last-of-type {
+  margin: 0;
+}
+
+/*  */
+
+/* arrow down */
+
+.arrow-down {
+  width: 0px;
+  height: 35px;
+
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+}
+
+.arrow-down::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  border: 3px solid;
+}
+/* arrow down */
 
 .clip {
   clip-path: circle(2200px at 40px 40px);

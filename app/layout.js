@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -42,9 +42,10 @@ export default function RootLayout({ children }) {
         className={`antialiased bg-primarylight dark:bg-primary`}
         id="parent"
       >
+        <Analytics />
         <div
           id="up"
-          className="main-container relative z-10 overflow-hidden bg-seconderylight dark:bg-secondery border-2 border-borderlight dark:border-border   mx-auto px-4 sm:px-16  "
+          className=""
         >
           <Header />
           {children}

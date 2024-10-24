@@ -20,3 +20,10 @@ export const navBar = [
     name: "skills",
   },
 ];
+export const navTitle = {
+  home: "Home",
+  about: "About Us",
+  contact: "Contact Us",
+  projects: "projects",
+  skills: "skills",
+};
