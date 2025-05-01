@@ -317,4 +317,15 @@ export const myProjects = [
     githubUrl: "https://github.com/Rashadhusien/Events-Manager-Application",
     moreUrl: "https://rashadhusien.github.io/Events-Manager-Application/",
   },
+  {
+    id: uuid(),
+    category: ["html&css", "JavaScript"],
+    imgUrl: "currency_converter_app_qk52e5",
+    title: "Currency Converter With API",
+    paragraph:
+      "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
+    linkActiveUrl: "https://github.com/Rashadhusien",
+    githubUrl: "https://github.com/Rashadhusien/Currency-Converter-With-API",
+    moreUrl: "https://rashadhusien.github.io/Currency-Converter-With-API/",
+  },
 ];
