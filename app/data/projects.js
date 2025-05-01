@@ -164,7 +164,7 @@ export const myProjects = [
     id: uuid(),
     category: ["reactjs", "JavaScript"],
     imgUrl: "prayertimings_jmphlx",
-    title: "prayers timings",
+    title: "prayers timings with API",
     paragraph:
       "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
     linkActiveUrl: "https://github.com/Rashadhusien",
@@ -220,7 +220,7 @@ export const myProjects = [
   },
   {
     id: uuid(),
-    category: ["nextjs", "JavaScript", "tailwind", "reactjs"],
+    category: ["nextjs", "tailwind"],
     imgUrl: "linkDesign_ocpwsw",
     title: "Link Design",
     paragraph:
@@ -228,5 +228,93 @@ export const myProjects = [
     linkActiveUrl: "https://github.com/Rashadhusien",
     githubUrl: "https://github.com/Rashadhusien/link-design",
     moreUrl: "https://link-design.vercel.app/",
+  },
+  {
+    id: uuid(),
+    category: ["nextjs", "tailwind"],
+    imgUrl: "storage-managment_uloo29",
+    title: "Storage Managent App",
+    paragraph:
+      "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
+    linkActiveUrl: "https://github.com/Rashadhusien",
+    githubUrl: "https://github.com/Rashadhusien/storage_managment",
+    moreUrl: "https://storage-managment-indol.vercel.app/sign-in",
+  },
+  {
+    id: uuid(),
+    category: ["tailwind", "reactjs"],
+    imgUrl: "todo_ol7jrw",
+    title: "ToDo Application",
+    paragraph:
+      "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
+    linkActiveUrl: "https://github.com/Rashadhusien",
+    githubUrl: "https://github.com/Rashadhusien/todo-react",
+    moreUrl: "https://stalwart-maamoul-b4728e.netlify.app/",
+  },
+  {
+    id: uuid(),
+    category: ["tailwind", "reactjs"],
+    imgUrl: "weather_app_hzafto",
+    title: "Weather App with API",
+    paragraph:
+      "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
+    linkActiveUrl: "https://github.com/Rashadhusien",
+    githubUrl: "",
+    moreUrl: "https://snazzy-narwhal-3bc87b.netlify.app/",
+  },
+  {
+    id: uuid(),
+    category: ["tailwind", "reactjs"],
+    imgUrl: "form-validation_friuws",
+    title: "Simple form validation",
+    paragraph:
+      "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
+    linkActiveUrl: "https://github.com/Rashadhusien",
+    githubUrl: "",
+    moreUrl: "https://effortless-monstera-a182dd.netlify.app/",
+  },
+  {
+    id: uuid(),
+    category: ["html&css", "JavaScript"],
+    imgUrl: "random-quote-generator_qllgwv",
+    title: "Random Quotes Generator",
+    paragraph:
+      "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
+    linkActiveUrl: "https://github.com/Rashadhusien",
+    githubUrl: "https://github.com/Rashadhusien/Random-Quotes-Generator",
+    moreUrl: "https://rashadhusien.github.io/Random-Quotes-Generator/",
+  },
+  {
+    id: uuid(),
+    category: ["html&css", "JavaScript"],
+    imgUrl: "image-slider_b7bi4d",
+    title: "Image Slider With Thumbnails",
+    paragraph:
+      "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
+    linkActiveUrl: "https://github.com/Rashadhusien",
+    githubUrl: "https://github.com/Rashadhusien/Image-Slider",
+    moreUrl: "https://rashadhusien.github.io/Image-Slider/",
+  },
+  {
+    id: uuid(),
+    category: ["html&css", "JavaScript"],
+    imgUrl: "xo_game_melf8a",
+    title: "Tic Tac Toe Game",
+    paragraph:
+      "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
+    linkActiveUrl: "https://github.com/Rashadhusien",
+    githubUrl: "https://github.com/Rashadhusien/Tic-Tac-Toe-Game",
+    moreUrl: "https://rashadhusien.github.io/Tic-Tac-Toe-Game/",
+  },
+  {
+    id: uuid(),
+    category: ["html&css", "JavaScript"],
+    imgUrl: "event_manager_fuiitd",
+    title: "Events Manager Application",
+    paragraph:
+      "Lorem ipsum dolor sit amet consectetur elit adipisicing . Extempore dolor in, accusantium laudantium accusamus.",
+    linkActiveUrl: "https://github.com/Rashadhusien",
+    githubUrl: "https://github.com/Rashadhusien/Events-Manager-Application",
+    moreUrl: "https://rashadhusien.github.io/Events-Manager-Application/",
   },
 ];

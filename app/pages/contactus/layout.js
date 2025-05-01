@@ -6,7 +6,7 @@ import { navTitle } from "@/app/data/navBar";
 const layout = () => {
   return (
     <div className="bg-seconderylight dark:bg-secondery overflow-hidden">
-      <PageTitle title={navTitle.contact} />
+      {/* <PageTitle title={navTitle.contact} /> */}
       <div className=" container mx-auto px-16">
         <ContactUs />
       </div>

@@ -10,15 +10,15 @@ function About() {
   const lottieRef = useRef();
 
   // State for job title animation and profile image popup
-  const [imgpopup, setimgpopup] = useState(false);
-  const [jopTitle, setJopTitle] = useState("");
+  const [imgpopup, setImgpopup] = useState(false);
+  const [jobTitle, setJobTitle] = useState("");
 
   // Image source
   const profile = "/profile.png";
 
   // Set job title after component mounts to prevent hydration issues
   useEffect(() => {
-    setJopTitle("Freelancer , Front End Developer 👩‍💻");
+    setJobTitle("Freelancer , Front End Developer");
   }, []);
 
   // Lottie animation speed control
@@ -44,7 +44,7 @@ function About() {
       id="about"
       onClick={() => {
         if (imgpopup) {
-          setimgpopup(false);
+          setImgpopup(false);
         }
       }}
     >
@@ -56,11 +56,11 @@ function About() {
             alt="me-main-section"
             className="w-24 dark:bg-[#18181b] rounded-full p-0.5 border border-blueElzero dark:border-orange shadow-inner cursor-pointer active:scale-150 hover:scale-150"
             onClick={() => {
-              setimgpopup(true);
+              setImgpopup(true);
             }}
           />
           {imgpopup && (
-            <div className="img-popup fixed  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-full h-full bg-popupMenu backdrop-blur duration-1000">
+            <div className="img-popup fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-full h-full bg-popupMenu backdrop-blur duration-1000">
               <Image
                 src={profile}
                 alt="me-main-section"
@@ -74,11 +74,11 @@ function About() {
         <div className="text">
           <motion.h1
             initial={{ opacity: 0 }}
-            className="title text-5xl leading-[70px] font-[900] my-6 text-primary dark:text-primarylight max-w-[580px]"
+            className="title text-5xl leading-[70px] font-extrabold my-6 text-primary dark:text-primarylight max-w-[580px]"
             animate={{ opacity: 1 }}
             transition={{ duration: 3 }}
           >
-            {jopTitle.split("").map((el, i) => (
+            {jobTitle.split("").map((el, i) => (
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -92,7 +92,7 @@ function About() {
               </motion.span>
             ))}
           </motion.h1>
-          <p className="sub-title mb-8 text-sub-title-light dark:text-subtitle font-bold]">
+          <p className="sub-title mb-8 text-sub-title-light dark:text-subtitle font-bold">
             I’m Rashad Husein, a Front-End Developer and entrepreneur based in
             Cairo City. I’m a Front End Developer and Freelancer, where we
             develop technologies that empower regular people to explore space on

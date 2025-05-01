@@ -1,46 +1,50 @@
 "use client";
 import { useForm, ValidationError } from "@formspree/react";
-
 import Lottie from "lottie-react";
-
 import doneAnimation from "@/app/animation/done.json";
-
 import contactAnimation from "@/app/animation/contact-us.json";
-
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function ContactUs() {
   const [state, handleSubmit] = useForm("xyyrleky");
+  const [formData, setFormData] = useState({ email: "", message: "" });
+  const [showSuccess, setShowSuccess] = useState(false);
 
-  const [suc, setsuc] = useState(state.succeeded);
-  const [rel, setRel] = useState({
-    input: "",
-    textarea: "",
-  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const customSubmit = async (e) => {
+    e.preventDefault();
+    setFormData({ email: "", message: "" });
+    setShowSuccess(true);
+    setTimeout(() => setShowSuccess(false), 3000);
+  };
 
   return (
-    <section className="contact-us" id="contact">
-      
+    <section className="contact-us" id="contactus">
       <div className="content-text mb-5">
-        <h3 className=" text-titlelight dark:text-title text-3xl font-bold mb-3 flex items-center gap-4">
-          <span className="icon-envelope text-sub-title-light dark:text-subtitle text-2xl" />{" "}
+        <h3 className="text-titlelight dark:text-title text-3xl font-bold mb-3 flex items-center gap-4">
+          <span className="icon-envelope text-sub-title-light dark:text-subtitle text-2xl" />
           Contact Us
         </h3>
-        <p className=" text-sub-title-light dark:text-subtitle text-md">
-          Contact us for more information and Get notified when I publish
+        <p className="text-sub-title-light dark:text-subtitle text-md">
+          Contact us for more information and get notified when I publish
           something new.
         </p>
       </div>
-      <section className="content w-full flex  flex-col sm:flex-row items-start sm:items-center  justify-start sm:justify-between  ">
+
+      <section className="content w-full flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-between">
         <form
-          onSubmit={handleSubmit}
-          className="contact flex flex-col w-full sm:w-auto "
+          onSubmit={customSubmit}
+          className="contact flex flex-col w-full sm:w-auto"
         >
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3  py-2 w-full justify-between">
+          {/* Email Field */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 py-2 w-full justify-between">
             <label
               htmlFor="email"
-              className=" text-sub-title-light dark:text-subtitle"
+              className="text-sub-title-light dark:text-subtitle"
             >
               Email Address:
             </label>
@@ -49,11 +53,9 @@ function ContactUs() {
               type="email"
               id="email"
               name="email"
-              value={rel.input}
-              onChange={(event) => {
-                setRel({ ...rel, input: event.target.value });
-              }}
-              className="inp w-full sm:w-auto p-2 rounded-lg  duration-500 outline-none  text-inputtext dark:text-white   bg-bginputlight dark:bg-bginput border border-borderinputlight dark:border-borderinput focus:border-blueElzero hover:border-blueElzero dark:focus:border-orange dark:hover:border-orange"
+              value={formData.email}
+              onChange={handleChange}
+              className="inp w-full sm:w-auto p-2 rounded-lg duration-500 outline-none text-inputtext dark:text-white bg-bginputlight dark:bg-bginput border border-borderinputlight dark:border-borderinput focus:border-blueElzero hover:border-blueElzero dark:focus:border-orange dark:hover:border-orange"
             />
             <ValidationError
               prefix="Email"
@@ -61,22 +63,22 @@ function ContactUs() {
               errors={state.errors}
             />
           </div>
-          <div className="flex flex-col sm:flex-row items-start  sm:items-center gap-3 mt-6  py-2  duration-300 w-full justify-between">
+
+          {/* Message Field */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-6 py-2 duration-300 w-full justify-between">
             <label
-              htmlFor="textarea"
-              className=" text-sub-title-light dark:text-subtitle"
+              htmlFor="message"
+              className="text-sub-title-light dark:text-subtitle"
             >
               Your message:
             </label>
             <textarea
               required
-              id="textarea"
+              id="message"
               name="message"
-              value={rel.textarea}
-              onChange={(event) => {
-                setRel({ ...rel, textarea: event.target.value });
-              }}
-              className="inp w-full resize min-h-36 sm:w-auto rounded-lg  duration-500 outline-none p-2 text-inputtext dark:text-white   bg-bginputlight dark:bg-bginput border border-borderinputlight dark:border-borderinput focus:border-blueElzero hover:border-blueElzero dark:focus:border-orange dark:hover:border-orange"
+              value={formData.message}
+              onChange={handleChange}
+              className="inp w-full resize min-h-36 sm:w-auto rounded-lg duration-500 outline-none p-2 text-inputtext dark:text-white bg-bginputlight dark:bg-bginput border border-borderinputlight dark:border-borderinput focus:border-blueElzero hover:border-blueElzero dark:focus:border-orange dark:hover:border-orange"
             />
             <ValidationError
               prefix="Message"
@@ -85,31 +87,18 @@ function ContactUs() {
             />
           </div>
 
+          {/* Submit Button */}
           <button
-            className=" bg-blueElzero dark:bg-bgsubmit text-primary dark:text-primarylight  border-2   dark:hover:border-orange active:scale-90 disabled:cursor-not-allowed disabled:opacity-40 hover:border-bordersubmit hover:scale-[.99] p-3 capitalize text-center w-44 text-lg self-center  rounded-md duration-300 font-bold   mt-10 "
-            disabled={suc}
-            onClick={() => {
-              if (rel.input === "" && rel.textarea === "") {
-                setsuc(false);
-              } else {
-                setRel({ input: "", textarea: "" });
-                setsuc(true);
-              }
-              setTimeout(() => {
-                setsuc(false);
-                // window.location.reload();
-              }, 1000);
-            }}
+            type="submit"
+            className="bg-blueElzero dark:bg-bgsubmit text-primary dark:text-primarylight border-2 dark:hover:border-orange active:scale-90 disabled:cursor-not-allowed disabled:opacity-40 hover:border-bordersubmit hover:scale-[.99] p-3 capitalize text-center w-44 text-lg self-center rounded-md duration-300 font-bold mt-10"
+            disabled={state.submitting}
           >
-            {suc ? "submitting ..." : "submit"}
+            {state.submitting ? "Submitting..." : "Submit"}
           </button>
 
-          {suc && (
-            <h1
-              className={`${
-                suc ? " opacity-100" : " opacity-0"
-              } flex items-center duration-300  transition-all`}
-            >
+          {/* Success Message */}
+          {showSuccess && (
+            <h1 className="flex items-center opacity-100 duration-300 transition-all mt-4 text-green-500">
               <Lottie
                 loop={false}
                 animationData={doneAnimation}
@@ -119,7 +108,8 @@ function ContactUs() {
             </h1>
           )}
         </form>
-        <section className="contact-animation hidden sm:block animation max-w-lg ">
+
+        <section className="contact-animation hidden sm:block animation max-w-lg">
           <Lottie animationData={contactAnimation} className="w-full h-full" />
         </section>
       </section>

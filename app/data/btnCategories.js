@@ -16,7 +16,7 @@ export const buttonsCategories = [
   },
   {
     id: 4,
-    btnCategory: "react",
+    btnCategory: "reactjs",
     displayName: "React Js",
   },
   {

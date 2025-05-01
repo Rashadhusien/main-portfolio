@@ -61,7 +61,7 @@ function Header() {
       onClick={() => {
         if (isMenuOpen) setIsMenuOpen(false);
       }}
-      className={` sticky top-0 left-0 w-full mx-auto z-20  duration-500 bg-seconderylight dark:bg-secondery overflow-hidden flex  items-center  justify-between sm:justify-around px-9 pt-5 pb-3 bg-transparent  ${
+      className={` sticky top-0 left-0 w-full mx-auto z-20  bg-transparent duration-500  overflow-hidden flex  items-center  justify-between sm:justify-around px-9 pt-5 pb-3   ${
         show ? "-translate-y-[20] " : " -translate-y-96 "
       }`}
     >
@@ -77,7 +77,7 @@ function Header() {
           isMenuOpen ? "opacity-100 clip max-w-96" : "opacity-0 notclip w-1/2"
         }`}
       >
-        <ul className="mt-20 pl-5  bg-seconderylight dark:bg-secondery">
+        <ul className="mt-20 pl-5  ">
           {navBar.map((item, i) => (
             <li
               key={i}
@@ -85,7 +85,7 @@ function Header() {
             >
               <Link
                 href={item.url != "/" ? `/pages/${item.url}` : item.url}
-                className="hover:text-blueElzero text-titlelight dark:text-title dark:hover:text-orange transition-all duration-300 text-xl w-full block"
+                className=" hover:text-blueElzero cursor-pointer text-titlelight dark:text-title dark:hover:text-orange transition-all duration-300 text-xl w-full block"
               >
                 {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
               </Link>
@@ -99,7 +99,7 @@ function Header() {
             <li key={i}>
               <Link
                 href={item.url != "/" ? `/pages/${item.url}` : item.url}
-                className="hover:text-blueElzero opacity-90 text-sm font-medium transition-all duration-300 text-titlelight dark:text-title dark:hover:text-orange"
+                className="hover:text-blueElzero cursor-pointer opacity-90 text-sm font-medium transition-all duration-300 text-titlelight dark:text-title dark:hover:text-orange"
               >
                 {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
               </Link>

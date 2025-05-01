@@ -6,8 +6,8 @@ import { navTitle } from "@/app/data/navBar";
 const layout = () => {
   return (
     <div className="bg-seconderylight dark:bg-secondery overflow-hidden">
-      <PageTitle title={navTitle.about} />
-      <div className=" container mx-auto px-16">
+      {/* <PageTitle title={navTitle.about} /> */}
+      <div className=" container mx-auto px-16 my-12">
         <About />
       </div>
     </div>

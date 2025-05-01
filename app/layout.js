@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["600", "700", "800", "900"],
 });
 
 export const metadata = {
@@ -39,14 +39,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`antialiased bg-primarylight dark:bg-primary`}
+        className={`antialiased bg-seconderylight dark:bg-secondery min-h-screen`}
         id="parent"
       >
         <Analytics />
-        <div
-          id="up"
-          className=""
-        >
+        <div id="up" className=" ">
           <Header />
           {children}
           <Footer />

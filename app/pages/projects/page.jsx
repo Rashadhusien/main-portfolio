@@ -15,7 +15,7 @@ function Projects() {
 
       <main
         className="flex gap-12 items-start flex-col sm:flex-col"
-        id="project"
+        id="projects"
       >
         <FilterButtons setArr={setArr} />
 
