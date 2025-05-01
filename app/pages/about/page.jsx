@@ -74,7 +74,7 @@ function About() {
         <div className="text">
           <motion.h1
             initial={{ opacity: 0 }}
-            className="title text-5xl leading-[70px] font-extrabold my-6 text-primary dark:text-primarylight max-w-[580px]"
+            className="title text-3xl sm:text-5xl sm:leading-[70px] font-extrabold my-6 text-primary dark:text-primarylight max-w-[580px]"
             animate={{ opacity: 1 }}
             transition={{ duration: 3 }}
           >
