@@ -25,10 +25,6 @@ function ContactUs() {
   return (
     <section className="contact-us" id="contactus">
       <div className="content-text mb-5">
-        <h3 className="text-titlelight dark:text-title text-3xl font-bold mb-3 flex items-center gap-4">
-          <span className="icon-envelope text-sub-title-light dark:text-subtitle text-2xl" />
-          Contact Us
-        </h3>
         <p className="text-sub-title-light dark:text-subtitle text-md">
           Contact us for more information and get notified when I publish
           something new.

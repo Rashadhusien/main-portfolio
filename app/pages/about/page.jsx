@@ -18,7 +18,7 @@ function About() {
 
   // Set job title after component mounts to prevent hydration issues
   useEffect(() => {
-    setJobTitle("Freelancer , Front End Developer");
+    setJobTitle("Front End Developer");
   }, []);
 
   // Lottie animation speed control
@@ -92,11 +92,19 @@ function About() {
               </motion.span>
             ))}
           </motion.h1>
-          <p className="sub-title mb-8 text-sub-title-light dark:text-subtitle font-bold">
-            I’m Rashad Husein, a Front-End Developer and entrepreneur based in
-            Cairo City. I’m a Front End Developer and Freelancer, where we
-            develop technologies that empower regular people to explore space on
-            their own terms.
+          <p className="sub-title max-w-[1200px] mb-8 text-sub-title-light dark:text-subtitle font-bold">
+            I&apos;m a{" "}
+            <strong className="text-blueElzero dark:text-orange">
+              Front-End Developer
+            </strong>{" "}
+            skilled in HTML, CSS, JavaScript, React.js, and Next.js. I build
+            responsive, user-friendly interfaces using Tailwind CSS and SCSS,
+            turning Figma designs into clean, performant code. I work with React
+            Hooks, Redux, Firebase, and Framer Motion to create{" "}
+            <strong className="text-blueElzero dark:text-orange">
+              fast, accessible, and visually{" "}
+            </strong>{" "}
+            engaging web experiences.
           </p>
         </div>
         <ul className="icons-social flex gap-5 text-xl">

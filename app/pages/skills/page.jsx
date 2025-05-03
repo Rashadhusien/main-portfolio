@@ -35,8 +35,8 @@ const Skills = () => {
   return (
     <div className="wrapper" id="skills">
       {Object.entries(groupedSkills).map(([category, skills]) => (
-        <div key={category} className="mb-10">
-          <h2 className="text-2xl font-bold mb-5 text-black dark:text-white capitalize">
+        <div key={category} className="mb-10 ml-4">
+          <h2 className=" text-2xl font-bold mb-5 text-black dark:text-white capitalize">
             {category}
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
