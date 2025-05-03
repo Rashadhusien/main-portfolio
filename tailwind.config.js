@@ -15,7 +15,7 @@ module.exports = {
         title: "rgb(244 244 245)",
         subtitle: "rgb(161 161 170)",
         bgHeader: "rgb(39 39 42)",
-        blue: "rgb(93 188 252)",
+        blue: "#00b0b9",
         "icon-hover": "#d4d4d8",
         primarylight: "rgb(250, 250, 250)",
         seconderylight: "rgb(255, 255, 255)",
@@ -23,12 +23,12 @@ module.exports = {
         titlelight: "rgb(39 39 42)",
         "sub-title-light": "rgb(82 82 91)",
         bgHeaderlight: "rgb(253 253 253)",
-        bluelight: "rgb(0 149 246)",
+        bluelight: "#00b0b9",
         "icon-hover-light": "#333",
         headerlink: "rgb(2 141 148)",
-        orange: "rgb(244, 165, 96)",
-        borderColororange: "rgba(244, 165, 96, 0.249)",
-        colororange: "rgb(244, 165, 96)",
+        orange: "#00b0b9",
+        borderColororange: "#00b0b9",
+        colororange: "#00b0b9",
         crimson: "#dc143c",
         popupMenu: "rgba(40, 40, 48, 0.91)",
         btnproject: " rgba(36, 37, 46, 1)",
@@ -49,8 +49,8 @@ module.exports = {
         scrolltop: "rgba(25, 118, 210, 0.85)",
         scrolltopborder: "rgba(255, 255, 255, 0.2)",
         scrollhover: " rgba(25, 118, 210)",
-        blueElzero: "#0075ff",
-        opacityorange: "#ffa5002e",
+        blueElzero: "#00b0b9",
+        opacityorange: "#00b0b9",
       },
 
       height: {
@@ -78,8 +78,18 @@ module.exports = {
         0.99: ".99",
       },
 
+      container: {
+        padding: {
+          DEFAULT: "1rem",
+          sm: "1.5rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
+        },
+      },
+
       backgroundColor: {
-        orange: "#ffa500",
+        orange: "#00b0b9",
       },
       boxShadow: {
         "3xl": "1px 1px 40px rgba(35, 35, 36, 0.165)",

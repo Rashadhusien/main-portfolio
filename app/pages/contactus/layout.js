@@ -1,13 +1,14 @@
+"use client";
 import React from "react";
 import ContactUs from "./page";
-import PageTitle from "@/app/components/PageTitle";
-import { navTitle } from "@/app/data/navBar";
+import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
+import { Mail } from "lucide-react";
 
 const layout = () => {
   return (
     <div className="bg-seconderylight dark:bg-secondery overflow-hidden">
-      {/* <PageTitle title={navTitle.contact} /> */}
-      <div className=" container mx-auto px-16">
+      <div className=" container mx-auto ">
+        <SectionTitle title={"Conatact Us"} icon={<Mail />} />
         <ContactUs />
       </div>
     </div>

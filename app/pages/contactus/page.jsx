@@ -3,7 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
 import doneAnimation from "@/app/animation/done.json";
 import contactAnimation from "@/app/animation/contact-us.json";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function ContactUs() {
   const [state, handleSubmit] = useForm("xyyrleky");
@@ -40,7 +40,7 @@ function ContactUs() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 py-2 w-full justify-between">
             <label
               htmlFor="email"
-              className="text-sub-title-light dark:text-subtitle"
+              className="text-sub-title-light min-w-[116px] dark:text-subtitle"
             >
               Email Address:
             </label>
@@ -51,7 +51,7 @@ function ContactUs() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="inp w-full sm:w-auto p-2 rounded-lg duration-500 outline-none text-inputtext dark:text-white bg-bginputlight dark:bg-bginput border border-borderinputlight dark:border-borderinput focus:border-blueElzero hover:border-blueElzero dark:focus:border-orange dark:hover:border-orange"
+              className="inp w-full  p-2 rounded-lg duration-500 outline-none text-inputtext dark:text-white bg-bginputlight dark:bg-bginput border border-borderinputlight dark:border-borderinput focus:border-blueElzero hover:border-blueElzero dark:focus:border-orange dark:hover:border-orange"
             />
             <ValidationError
               prefix="Email"
@@ -64,7 +64,7 @@ function ContactUs() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-6 py-2 duration-300 w-full justify-between">
             <label
               htmlFor="message"
-              className="text-sub-title-light dark:text-subtitle"
+              className="text-sub-title-light min-w-[115px] dark:text-subtitle"
             >
               Your message:
             </label>
@@ -74,7 +74,7 @@ function ContactUs() {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="inp w-full resize min-h-36 sm:w-auto rounded-lg duration-500 outline-none p-2 text-inputtext dark:text-white bg-bginputlight dark:bg-bginput border border-borderinputlight dark:border-borderinput focus:border-blueElzero hover:border-blueElzero dark:focus:border-orange dark:hover:border-orange"
+              className="inp w-full resize min-h-36  rounded-lg duration-500 outline-none p-2 text-inputtext dark:text-white bg-bginputlight dark:bg-bginput border border-borderinputlight dark:border-borderinput focus:border-blueElzero hover:border-blueElzero dark:focus:border-orange dark:hover:border-orange"
             />
             <ValidationError
               prefix="Message"
@@ -86,7 +86,7 @@ function ContactUs() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="bg-blueElzero dark:bg-bgsubmit text-primary dark:text-primarylight border-2 dark:hover:border-orange active:scale-90 disabled:cursor-not-allowed disabled:opacity-40 hover:border-bordersubmit hover:scale-[.99] p-3 capitalize text-center w-44 text-lg self-center rounded-md duration-300 font-bold mt-10"
+            className="flex items-center justify-center mt-10 gap-2 px-6 py-3 rounded-md text-center border-2 border-black active:scale-90 disabled:cursor-not-allowed disabled:opacity-40  dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
             disabled={state.submitting}
           >
             {state.submitting ? "Submitting..." : "Submit"}

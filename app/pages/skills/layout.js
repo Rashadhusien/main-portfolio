@@ -1,14 +1,13 @@
-import PageTitle from "@/app/components/PageTitle";
-import { navTitle } from "@/app/data/navBar";
 import React from "react";
 import Skills from "./page";
+import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
+import { CodeXml } from "lucide-react";
 
 const layout = () => {
   return (
     <div className="bg-seconderylight dark:bg-secondery overflow-hidden my-12">
-      {/* <PageTitle title={navTitle.skills} /> */}
-
-      <div className=" container mx-auto px-16 ">
+      <div className=" container mx-auto   ">
+        <SectionTitle title={"Skills"} icon={<CodeXml />} />
         <Skills />
       </div>
     </div>

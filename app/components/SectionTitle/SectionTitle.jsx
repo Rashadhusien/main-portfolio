@@ -2,7 +2,7 @@
 import "./style.css";
 import { motion } from "framer-motion";
 
-const SectionTitle = ({ title }) => {
+const SectionTitle = ({ title, icon = "" }) => {
   return (
     <motion.section
       initial={{ y: 50, opacity: 0 }}
@@ -16,7 +16,7 @@ const SectionTitle = ({ title }) => {
       className="relative mb-5 text-center max-w-[350px]"
     >
       <h3 className="text-3xl  flex items-center gap-2 px-6 py-3 rounded-sm border-l-[10px]   text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300">
-        
+        {icon}
         {title}
       </h3>
     </motion.section>

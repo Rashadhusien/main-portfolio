@@ -1,5 +1,4 @@
 import Image from "next/image";
-import "./style.css";
 import { skillsData } from "@/app/data/skillsData";
 
 // Optional: define level priority for sorting
@@ -36,7 +35,7 @@ const Skills = () => {
     <div className="wrapper" id="skills">
       {Object.entries(groupedSkills).map(([category, skills]) => (
         <div key={category} className="mb-10 ml-4">
-          <h2 className=" text-2xl font-bold mb-5 text-black dark:text-white capitalize">
+          <h2 className="pl-[10px] rounded-sm border-l-4 text-2xl font-bold mb-5 text-black dark:text-white capitalize">
             {category}
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
@@ -50,12 +49,9 @@ const Skills = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-sm text-black dark:text-white font-medium">
+                <p className=" text-sm text-black dark:text-white font-medium">
                   {skill.name}
                 </p>
-                {/* <p className="text-xs text-gray-500 dark:text-gray-400">
-                  {skill.level}
-                </p> */}
               </div>
             ))}
           </div>
