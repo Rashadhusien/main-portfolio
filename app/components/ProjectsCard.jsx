@@ -43,7 +43,7 @@ const ProjectsCard = ({ arr }) => {
                 className="group p-3 dark:bg-popupMenu bg-slate-200 flex flex-col items-center justify-between overflow-hidden rounded-xl hover:scale-[1.01] shadow-sm transition-transform duration-300"
               >
                 {item.isPinned && (
-                  <Pin className="absolute top-[5px] right-[5px] z-10 rotate-[30deg] p-[2px] rounded-md text-[10px] w-[25px] h-[25px] text-orange" />
+                  <Pin className="absolute bg-orange top-[5px] right-[5px] z-10 rotate-[30deg] p-[2px] rounded-full text-[10px] w-[20px] h-[20px] text-white" />
                 )}
                 <section className="relative flex justify-center items-center w-full overflow-hidden rounded-xl">
                   <a
@@ -59,12 +59,6 @@ const ProjectsCard = ({ arr }) => {
                       alt={item.altText || `Image of ${item.title}`}
                       className="object-cover scale-105 group-hover:scale-125 group-hover:brightness-75 transition duration-300"
                     />
-                    <div className="absolute top-1/2 left-1/2 w-0 h-0 rounded-xl bg-popupMenu shadow-md -translate-x-1/2 -translate-y-1/2 group-hover:w-16 group-hover:h-16 transition-all duration-300 flex justify-center items-center">
-                      <Lottie
-                        animationData={whiteEye}
-                        className="w-full h-full scale-[4] transition-all duration-300"
-                      />
-                    </div>
                   </a>
                 </section>
 

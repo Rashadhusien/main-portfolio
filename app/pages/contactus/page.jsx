@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import doneAnimation from "@/app/animation/done.json";
 import contactAnimation from "@/app/animation/contact-us.json";
 import { useState } from "react";
+import { TerminalDemo } from "@/app/components/Terminal";
 
 function ContactUs() {
   const [state, handleSubmit] = useForm("xyyrleky");
@@ -31,7 +32,7 @@ function ContactUs() {
         </p>
       </div>
 
-      <section className="content w-full flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-between">
+      <section className="content w-full flex gap-2 lg:gap-0 flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-between">
         <form
           onSubmit={customSubmit}
           className="contact flex flex-col w-full sm:w-auto"
@@ -105,8 +106,9 @@ function ContactUs() {
           )}
         </form>
 
-        <section className="contact-animation hidden sm:block animation max-w-lg">
-          <Lottie animationData={contactAnimation} className="w-full h-full" />
+        <section className="contact-animation hidden md:block animation max-w-lg">
+          {/* <Lottie animationData={contactAnimation} className="w-full h-full" /> */}
+          <TerminalDemo />
         </section>
       </section>
     </section>

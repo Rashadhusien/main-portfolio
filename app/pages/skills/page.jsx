@@ -46,7 +46,9 @@ const Skills = () => {
                     fill
                     src={skill.url}
                     alt={skill.name}
-                    className="object-contain"
+                    className={`object-contain ${
+                      skill.name.toLowerCase() === "github" ? "dark:invert" : ""
+                    }`}
                   />
                 </div>
                 <p className=" text-sm text-black dark:text-white font-medium">

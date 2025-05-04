@@ -6,8 +6,7 @@ import { useRef, useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Github, Linkedin, MessageCircle, Twitter } from "lucide-react";
-import { TerminalDemo } from "@/app/components/Terminal";
-import { FlipText } from "@/app/components/FlipText";
+import { SparklesText } from "@/app/components/SparklesText";
 
 const socials = [
   {
@@ -98,8 +97,11 @@ function About() {
           )}
         </div>
         <div className="text">
-          <h1 className="title text-3xl sm:text-5xl sm:leading-[70px] font-extrabold my-6 text-primary dark:text-primarylight max-w-[580px]">
-            <FlipText>Front-End Developer</FlipText>
+          <h1 className="title text-3xl sm:text-5xl sm:leading-[70px] font-extrabold my-6 text-primary dark:text-primarylight w-full">
+            <SparklesText className={"w-full"}>
+              {" "}
+              Front-End Developer{" "}
+            </SparklesText>
           </h1>
           <p className="sub-title max-w-[1200px] mb-8 text-[#333] dark:text-[#eee] font-bold">
             I&apos;m <strong className="text-orange ">Rashad Hussein</strong>{" "}
@@ -135,12 +137,11 @@ function About() {
         </ul>
       </section>
       <section className="right-section animation w-full hidden sm:block">
-        {/* <Lottie
+        <Lottie
           animationData={developer}
           className="w-full h-full translate-x-14 translate-y-10"
           lottieRef={lottieRef}
-        /> */}
-        <TerminalDemo />
+        />
       </section>
     </section>
   );

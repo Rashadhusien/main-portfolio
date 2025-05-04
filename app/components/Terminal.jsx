@@ -1,11 +1,21 @@
+"use client";
+import { useEffect, useState } from "react";
 import { AnimatedSpan, Terminal, TypingAnimation } from "./magicui/terminal";
 
 export function TerminalDemo() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // ensures this runs only on client
+  }, []);
+
+  if (!isClient) return null;
+
   return (
     <Terminal>
       <TypingAnimation>&gt; npx create-dev --name rashad</TypingAnimation>
 
-      <AnimatedSpan delay={1500} className="text-green-500">
+      <AnimatedSpan delay={1500} className={` text-green-500`}>
         <span>✔ Booting developer environment...</span>
       </AnimatedSpan>
 
