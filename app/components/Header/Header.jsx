@@ -67,7 +67,7 @@ function Header() {
     >
       <button
         onClick={handleMenuToggle}
-        className={`icon-th-menu block z-50 sm:hidden active:scale-90 w-10 h-10 rounded-full border border-blue dark:border-opacityorange shadow-3xl duration-300 text-xl bg-bgHeaderlight dark:bg-bgHeader text-subtitle dark:text-sub-title-light hover:text-titlelight hover:border-orange dark:hover:text-title dark:hover:border-orange ${
+        className={`icon-th-menu block z-50 sm:hidden active:scale-90 w-10 h-10 rounded-full border border-blue dark:border-opacityorange shadow-3xl duration-300 text-xl bg-bgHeaderlight dark:bg-box text-subtitle dark:text-sub-title-light hover:text-titlelight hover:border-orange dark:hover:text-title dark:hover:border-orange ${
           isMenuOpen ? "icon-close fixed" : "icon-th-menu"
         }`}
       />
