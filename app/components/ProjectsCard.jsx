@@ -71,11 +71,13 @@ const ProjectsCard = ({ arr }) => {
                 <section className="px-2">
                   {/* Client-side rendering for BoxReveal */}
                   <h3 className="text-xl text-black dark:text-white my-5">
-                    <BoxReveal>{item.title}</BoxReveal>
+                    <span className="inline-block">
+                      <BoxReveal>{item.title}</BoxReveal>
+                    </span>
                   </h3>
-                  <p className="text-md font-[300] text-[#333] dark:text-primarylight my-5">
+                  <div className="text-md font-[300] text-[#333] dark:text-primarylight my-5">
                     <BoxReveal>{item.paragraph}</BoxReveal>
-                  </p>
+                  </div>
                 </section>
 
                 <section className="mt-2 border-t border-t-orange w-full px-2">
