@@ -129,8 +129,8 @@ module.exports = {
       },
       animation: {
         menuscale: "menuscale 0.5s ease",
-        marquee: "marquee 20s linear infinite",
-        "marquee-vertical": "marquee-vertical 20s linear infinite",
+        marquee: "marquee 30s linear infinite",
+        "marquee-vertical": "marquee-vertical 30s linear infinite",
       },
       keyframes: {
         menuscale: {
