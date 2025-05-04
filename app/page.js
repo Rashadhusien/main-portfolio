@@ -33,7 +33,7 @@ export default function Home() {
   const [showScrollBtn, setshowScrollBtn] = useState(false);
 
   return (
-    <div className="container  mx-auto main-container relative z-10 overflow-hidden bg-seconderylight dark:bg-secondery    ">
+    <div className="container  mx-auto main-container relative z-10 overflow-hidden    ">
       <motion.div className="progress-bar bg-orange" style={{ scaleX }} />
 
       <Hero />

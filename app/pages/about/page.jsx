@@ -79,7 +79,7 @@ function About() {
             {...profileAnimation}
             src={profile}
             alt="me-main-section"
-            className="w-24 dark:bg-[#18181b] rounded-full p-0.5 border border-blueElzero dark:border-orange shadow-inner cursor-pointer active:scale-150 hover:scale-150"
+            className="w-24 dark:bg-[#18181b] rounded-full p-0.5 border border-orange dark:border-orange shadow-inner cursor-pointer active:scale-150 hover:scale-150"
             onClick={() => {
               setImgpopup(true);
             }}
@@ -91,7 +91,7 @@ function About() {
                 alt="me-main-section"
                 width={500}
                 height={500}
-                className="w-[80%] bg-white zoomed-image dark:bg-[#18181b] md:w-1/3 rounded-full p-0.5 border border-blueElzero dark:border-orange shadow-inner cursor-pointer absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50"
+                className="w-[80%] bg-white zoomed-image dark:bg-[#18181b] md:w-1/3 rounded-full p-0.5 border border-orange dark:border-orange shadow-inner cursor-pointer absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50"
               />
             </div>
           )}

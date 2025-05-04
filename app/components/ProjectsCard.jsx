@@ -40,7 +40,7 @@ const ProjectsCard = ({ arr }) => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 key={item.id}
-                className="group p-3 dark:bg-popupMenu bg-slate-200 flex flex-col items-center justify-between overflow-hidden rounded-xl hover:scale-[1.01] shadow-sm transition-transform duration-300"
+                className="group p-3 dark:bg-box bg-white flex flex-col items-center justify-between overflow-hidden rounded-xl hover:scale-[1.01] shadow-md transition-transform duration-300"
               >
                 {item.isPinned && (
                   <Pin className="absolute bg-orange top-[5px] right-[5px] z-10 rotate-[30deg] p-[2px] rounded-full text-[10px] w-[20px] h-[20px] text-white" />

@@ -67,7 +67,7 @@ function Header() {
     >
       <button
         onClick={handleMenuToggle}
-        className={`icon-th-menu block z-50 sm:hidden active:scale-90 w-10 h-10 rounded-full border border-blue dark:border-opacityorange shadow-3xl duration-300 text-xl bg-bgHeaderlight dark:bg-bgHeader text-subtitle dark:text-sub-title-light hover:text-titlelight hover:border-blueElzero dark:hover:text-title dark:hover:border-orange ${
+        className={`icon-th-menu block z-50 sm:hidden active:scale-90 w-10 h-10 rounded-full border border-blue dark:border-opacityorange shadow-3xl duration-300 text-xl bg-bgHeaderlight dark:bg-bgHeader text-subtitle dark:text-sub-title-light hover:text-titlelight hover:border-orange dark:hover:text-title dark:hover:border-orange ${
           isMenuOpen ? "icon-close fixed" : "icon-th-menu"
         }`}
       />
@@ -85,7 +85,7 @@ function Header() {
             >
               <Link
                 href={item.url != "/" ? `/pages/${item.url}` : item.url}
-                className=" hover:text-blueElzero cursor-pointer text-titlelight dark:text-title dark:hover:text-orange transition-all duration-300 text-xl w-full block"
+                className=" hover:text-orange cursor-pointer text-titlelight dark:text-title dark:hover:text-orange transition-all duration-300 text-xl w-full block"
               >
                 {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
               </Link>
@@ -93,13 +93,13 @@ function Header() {
           ))}
         </ul>
       </div>
-      <nav className="py-3 px-6 rounded-full shadow-3xl hidden sm:block mr-2 bg-bgHeaderlight dark:bg-bgHeader">
+      <nav className="py-3 px-6 rounded-full shadow-3xl hidden sm:block mr-2 bg-bgHeaderlight dark:bg-box">
         <ul className="flex gap-4">
           {navBar.map((item, i) => (
             <li key={i}>
               <Link
                 href={item.url != "/" ? `/pages/${item.url}` : item.url}
-                className="hover:text-blueElzero cursor-pointer opacity-90 text-sm font-medium transition-all duration-300 text-titlelight dark:text-title dark:hover:text-orange"
+                className="hover:text-orange  cursor-pointer opacity-90 text-sm font-medium transition-all duration-300 text-titlelight dark:text-title dark:hover:text-orange"
               >
                 {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
               </Link>
@@ -108,7 +108,7 @@ function Header() {
         </ul>
       </nav>
       <button
-        className="icon-mode active:scale-90 text-xl w-10 h-10 rounded-full border shadow-3xl duration-300 bg-bgHeaderlight dark:bg-bgHeader dark:text-opacityorange dark:hover:text-orange dark:text-sub-title-light text-subtitle opacity-90 hover:opacity-100 border-blue hover:border-blueElzero hover:text-blueElzero dark:border-opacityorange dark:hover:border-orange"
+        className="icon-mode active:scale-90 text-xl w-10 h-10 rounded-full border shadow-3xl duration-300 bg-bgHeaderlight dark:bg-box dark:text-opacityorange dark:hover:text-orange  text-subtitle opacity-90 hover:opacity-100 border-blue hover:border-orange hover:text-orange dark:border-opacityorange dark:hover:border-orange"
         onClick={toggleTheme}
         aria-label="Toggle theme"
       >
