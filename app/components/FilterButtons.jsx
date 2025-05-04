@@ -68,11 +68,11 @@ const FilterButtons = ({ setArr }) => {
       >
         <button
           onClick={() => handleClick("all")}
-          className={`duration-500 p-3 capitalize sm:w-44 text-base rounded-xl border-2 hover:border-orange hover:text-orange text-primary dark:text-white bg-blueElzero dark:bg-btnproject
+          className={`duration-500 py-3 w-11 sm:p-3 capitalize sm:w-44 text-base rounded-xl border-2 hover:border-orange hover:text-orange  dark:hover:text-orange bg-blueElzero dark:bg-btnproject
           ${
             activeCategory === "all"
               ? "  opacity-100 font-bold tracking-tight text-orange  border-orange"
-              : " "
+              : "text-primary dark:text-white "
           }`}
         >
           All Projects
@@ -81,11 +81,11 @@ const FilterButtons = ({ setArr }) => {
           <button
             key={btn.id}
             onClick={() => handleClick(btn.btnCategory)}
-            className={`duration-500 p-3 capitalize sm:w-44 text-base rounded-xl border-2 hover:border-orange hover:text-orange bg-blueElzero text-primary dark:text-white dark:bg-btnproject 
+            className={`duration-500 py-1 sm:p-3 capitalize w-32 sm:w-44 text-base rounded-xl border-2 hover:border-orange hover:text-orange bg-blueElzero  dark:hover:text-orange dark:bg-btnproject 
             ${
               activeCategory === btn.btnCategory
-                ? " opacity-100 font-bold tracking-tight border-orange  "
-                : ""
+                ? " opacity-100 font-bold tracking-tight border-orange text-orange "
+                : "text-primary dark:text-white"
             }`}
           >
             {btn.displayName}

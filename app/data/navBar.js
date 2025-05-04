@@ -7,19 +7,21 @@ export const navBar = [
   },
   {
     url: "about",
-    name: "About Us",
+    name: "About",
   },
+
   {
-    url: "contactus",
-    name: "Contact Us",
+    url: "skills",
+    name: "skills",
   },
   {
     url: "projects",
     name: "projects",
   },
+
   {
-    url: "skills",
-    name: "skills",
+    url: "contactus",
+    name: "Contact",
   },
 ];
 export const navTitle = {

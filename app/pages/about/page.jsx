@@ -5,6 +5,30 @@ import developer from "../../animation/developer.json";
 import { useRef, useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Github, Linkedin, MessageCircle, Twitter } from "lucide-react";
+
+const socials = [
+  {
+    url: "https://twitter.com/husein_ras77425",
+    name: "twitter",
+    icon: <Twitter />,
+  },
+  {
+    url: "https://github.com/Rashadhusien",
+    name: "github",
+    icon: <Github />,
+  },
+  {
+    url: "https://www.linkedin.com/in/rashad-husein-2770622aa/",
+    name: "twitter",
+    icon: <Linkedin />,
+  },
+  {
+    url: " https://wa.me/01110105367",
+    name: "whatsapp",
+    icon: <MessageCircle />,
+  },
+];
 
 function About() {
   const lottieRef = useRef();
@@ -92,46 +116,37 @@ function About() {
               </motion.span>
             ))}
           </motion.h1>
-          <p className="sub-title max-w-[1200px] mb-8 text-sub-title-light dark:text-subtitle font-bold">
-            I&apos;m a{" "}
-            <strong className="text-blueElzero dark:text-orange">
-              Front-End Developer
-            </strong>{" "}
-            skilled in HTML, CSS, JavaScript, React.js, and Next.js. I build
-            responsive, user-friendly interfaces using Tailwind CSS and SCSS,
-            turning Figma designs into clean, performant code. I work with React
-            Hooks, Redux, Firebase, and Framer Motion to create{" "}
-            <strong className="text-blueElzero dark:text-orange">
+          <p className="sub-title max-w-[1200px] mb-8 text-[#333] dark:text-[#eee] font-bold">
+            I&apos;m <strong className="text-orange ">Rashad Hussein</strong>{" "}
+            skilled in HTML, CSS, JavaScript, React.js, and Next.js. I build{" "}
+            <strong className="text-orange ">
+              responsive, user-friendly interfaces{" "}
+            </strong>
+            using Tailwind CSS and SCSS, turning Figma designs into clean,
+            performant code. I work with React Hooks, Redux, Firebase, and
+            Framer Motion to create{" "}
+            <strong className="text-orange ">
               fast, accessible, and visually{" "}
             </strong>{" "}
             engaging web experiences.
           </p>
         </div>
         <ul className="icons-social flex gap-5 text-xl">
-          <li>
-            <a
-              href="https://twitter.com/husein_ras77425"
-              target="_blank"
-              aria-label="Twitter Profile"
-              className="duration-300 hover:text-xl text-lg text-icon-hover hover:text-icon-hover-light dark:hover:text-orange icon-twitter"
-            />
-          </li>
-          <li>
-            <a
-              href="https://github.com/Rashadhusien"
-              target="_blank"
-              aria-label="GitHub Profile"
-              className="duration-300 hover:text-xl text-lg text-icon-hover hover:text-icon-hover-light dark:hover:text-orange icon-github-alt"
-            />
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/rashad-husein-2770622aa/"
-              target="_blank"
-              aria-label="LinkedIn Profile"
-              className="duration-300 hover:text-xl text-lg text-icon-hover hover:text-icon-hover-light dark:hover:text-orange icon-linkedin-square"
-            />
-          </li>
+          {socials.map((social, i) => {
+            const { url, icon, name } = social;
+            return (
+              <li key={i}>
+                <a
+                  href={url}
+                  target="_blank"
+                  aria-label={name}
+                  className="duration-300 hover:text-xl text-lg text-black dark:text-white "
+                >
+                  {icon}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </section>
       <section className="right-section animation w-full hidden sm:block">
