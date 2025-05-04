@@ -64,7 +64,7 @@ const FilterButtons = ({ setArr }) => {
       {/* Scrollable Button Container */}
       <motion.div
         ref={scrollRef}
-        className="btns-div w-full flex overflow-x-auto py-5 px-10 space-x-4 scroll-smooth no-scrollbar"
+        className="btns-div w-full flex overflow-x-auto   scroll-smooth no-scrollbar"
       >
         <button
           onClick={() => handleClick("all")}

@@ -9,7 +9,8 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { navTitle } from "./data/navBar";
 
 import Projects from "./pages/projects/page";
-import { CodeXml, FolderKanban, Mail } from "lucide-react";
+import { Book, CodeXml, FolderKanban, Mail } from "lucide-react";
+import MarqueeDemo from "./components/Testemonials";
 
 export default function Home() {
   useEffect(() => {
@@ -32,7 +33,7 @@ export default function Home() {
   const [showScrollBtn, setshowScrollBtn] = useState(false);
 
   return (
-    <div className="container mx-auto main-container relative z-10 overflow-hidden bg-seconderylight dark:bg-secondery    ">
+    <div className="container  mx-auto main-container relative z-10 overflow-hidden bg-seconderylight dark:bg-secondery    ">
       <motion.div className="progress-bar bg-orange" style={{ scaleX }} />
 
       <Hero />
@@ -47,6 +48,9 @@ export default function Home() {
 
       <Projects />
 
+      <div className="border-b border-borderlight dark:border-border my-12 w-[200%] -ml-16" />
+      <SectionTitle title={"Testimonials"} icon={<Book />} />
+      <MarqueeDemo />
       <div className="border-b border-borderlight dark:border-border my-12 w-[200%] -ml-16" />
       <SectionTitle title={navTitle.contact} icon={<Mail />} />
       <Contact />

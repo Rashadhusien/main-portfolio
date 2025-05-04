@@ -6,6 +6,8 @@ import { useRef, useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Github, Linkedin, MessageCircle, Twitter } from "lucide-react";
+import { TerminalDemo } from "@/app/components/Terminal";
+import { FlipText } from "@/app/components/FlipText";
 
 const socials = [
   {
@@ -35,15 +37,15 @@ function About() {
 
   // State for job title animation and profile image popup
   const [imgpopup, setImgpopup] = useState(false);
-  const [jobTitle, setJobTitle] = useState("");
+  // const [jobTitle, setJobTitle] = useState("");
 
   // Image source
   const profile = "/profile.png";
 
   // Set job title after component mounts to prevent hydration issues
-  useEffect(() => {
-    setJobTitle("Front End Developer");
-  }, []);
+  // useEffect(() => {
+  //   setJobTitle("Front End Developer");
+  // }, []);
 
   // Lottie animation speed control
   useEffect(() => {
@@ -64,7 +66,7 @@ function About() {
 
   return (
     <section
-      className="hero flex mt-12 items-center"
+      className="hero flex mt-12 gap-5 items-center"
       id="about"
       onClick={() => {
         if (imgpopup) {
@@ -96,26 +98,9 @@ function About() {
           )}
         </div>
         <div className="text">
-          <motion.h1
-            initial={{ opacity: 0 }}
-            className="title text-3xl sm:text-5xl sm:leading-[70px] font-extrabold my-6 text-primary dark:text-primarylight max-w-[580px]"
-            animate={{ opacity: 1 }}
-            transition={{ duration: 3 }}
-          >
-            {jobTitle.split("").map((el, i) => (
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                  duration: 0.3,
-                  delay: i / 5,
-                }}
-                key={i}
-              >
-                {el}
-              </motion.span>
-            ))}
-          </motion.h1>
+          <h1 className="title text-3xl sm:text-5xl sm:leading-[70px] font-extrabold my-6 text-primary dark:text-primarylight max-w-[580px]">
+            <FlipText>Front-End Developer</FlipText>
+          </h1>
           <p className="sub-title max-w-[1200px] mb-8 text-[#333] dark:text-[#eee] font-bold">
             I&apos;m <strong className="text-orange ">Rashad Hussein</strong>{" "}
             skilled in HTML, CSS, JavaScript, React.js, and Next.js. I build{" "}
@@ -150,11 +135,12 @@ function About() {
         </ul>
       </section>
       <section className="right-section animation w-full hidden sm:block">
-        <Lottie
+        {/* <Lottie
           animationData={developer}
           className="w-full h-full translate-x-14 translate-y-10"
           lottieRef={lottieRef}
-        />
+        /> */}
+        <TerminalDemo />
       </section>
     </section>
   );

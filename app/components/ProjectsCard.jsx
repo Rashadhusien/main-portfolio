@@ -1,12 +1,13 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { CldImage } from "next-cloudinary";
 import Lottie from "lottie-react";
 import { ChevronDown, ChevronRight, Github, Pin } from "lucide-react";
 import whiteEye from "@/app/animation/white-eye.json";
 import "./ProjectCard.css";
+import { BoxReveal } from "./BoxReveal";
 
 const ProjectsCard = ({ arr }) => {
   const [visibleCount, setVisibleCount] = useState(6);
@@ -16,7 +17,11 @@ const ProjectsCard = ({ arr }) => {
     setVisibleCount(isAllVisible ? 6 : arr.length);
   };
 
-  const sortedProjects = [...arr].sort((a, b) => b.isPinned - a.isPinned);
+  // Move sorting to useMemo to ensure deterministic rendering
+  const sortedProjects = useMemo(() => {
+    return [...arr].sort((a, b) => b.isPinned - a.isPinned);
+  }, [arr]);
+
   const visibleProjects = sortedProjects.slice(0, visibleCount);
 
   return (
@@ -64,11 +69,12 @@ const ProjectsCard = ({ arr }) => {
                 </section>
 
                 <section className="px-2">
+                  {/* Client-side rendering for BoxReveal */}
                   <h3 className="text-xl text-black dark:text-white my-5">
-                    {item.title}
+                    <BoxReveal>{item.title}</BoxReveal>
                   </h3>
                   <p className="text-md font-[300] text-[#333] dark:text-primarylight my-5">
-                    {item.paragraph}
+                    <BoxReveal>{item.paragraph}</BoxReveal>
                   </p>
                 </section>
 
@@ -82,6 +88,7 @@ const ProjectsCard = ({ arr }) => {
                     >
                       <Github /> github
                     </a>
+
                     <a
                       href={item.moreUrl}
                       target="_blank"
