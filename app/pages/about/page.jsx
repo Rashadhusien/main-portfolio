@@ -75,11 +75,13 @@ function About() {
     >
       <section className="left-section grow">
         <div className="parent-avatar flex items-end gap-1 min-h-24">
-          <motion.img
+          <Image
             {...profileAnimation}
             src={profile}
             alt="me-main-section"
-            className="w-24 dark:bg-[#18181b] rounded-full p-0.5 border border-orange dark:border-orange shadow-inner cursor-pointer active:scale-150 hover:scale-150"
+            width={500}
+            height={500}
+            className="w-24 dark:bg-[#18181b] rounded-full p-0.5 border border-orange dark:border-orange shadow-inner cursor-pointer  duration-300 active:scale-150 hover:scale-150"
             onClick={() => {
               setImgpopup(true);
             }}

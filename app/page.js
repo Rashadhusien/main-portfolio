@@ -48,9 +48,9 @@ export default function Home() {
 
       <Projects />
 
-      <div className="border-b border-borderlight dark:border-border my-12 w-[200%] -ml-16" />
+      {/* <div className="border-b border-borderlight dark:border-border my-12 w-[200%] -ml-16" />
       <SectionTitle title={"Testimonials"} icon={<Book />} />
-      <MarqueeDemo />
+      <MarqueeDemo /> */}
       <div className="border-b border-borderlight dark:border-border my-12 w-[200%] -ml-16" />
       <SectionTitle title={navTitle.contact} icon={<Mail />} />
       <Contact />

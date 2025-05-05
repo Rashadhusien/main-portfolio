@@ -26,7 +26,7 @@ const ProjectsCard = ({ arr }) => {
 
   return (
     <>
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 md:gap-10 transition-all duration-500">
+      <section className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 md:gap-10 transition-all duration-500">
         <AnimatePresence>
           {arr.length === 0 ? (
             <p className="text-xl text-center text-black dark:text-white col-span-full">
@@ -102,10 +102,10 @@ const ProjectsCard = ({ arr }) => {
       </section>
 
       {arr.length > 6 && (
-        <div className="mt-8 flex flex-col items-center justify-center w-full">
+        <div className="mt-8 relative flex flex-col items-center justify-center w-full">
           <button
             onClick={handleToggleView}
-            className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+            className={`  flex items-center gap-2 px-6 py-3 rounded-full border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300`}
           >
             {isAllVisible ? "View Less" : "View More"}
             <span

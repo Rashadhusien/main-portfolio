@@ -6,7 +6,7 @@ import { CodeXml } from "lucide-react";
 const layout = () => {
   return (
     <div className="bg-seconderylight dark:bg-secondery overflow-hidden my-12">
-      <div className=" container mx-auto   ">
+      <div className=" container mx-auto my-12  ">
         <SectionTitle title={"Skills"} icon={<CodeXml />} />
         <Skills />
       </div>

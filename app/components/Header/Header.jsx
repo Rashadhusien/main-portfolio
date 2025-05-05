@@ -5,31 +5,11 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import { navBar } from "@/app/data/navBar";
 
+import { useTheme } from "next-themes";
+
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState("dark");
-
-  useEffect(() => {
-    // Only run on client
-    if (typeof window !== "undefined") {
-      const currentMode = window.localStorage.getItem("currentMode") || "dark";
-      setTheme(currentMode);
-      document.documentElement.classList.add(currentMode);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      document.documentElement.classList.toggle("dark", theme === "dark");
-      document.documentElement.classList.toggle("light", theme === "light");
-    }
-  }, [theme]);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    window.localStorage.setItem("currentMode", newTheme);
-  };
+  const { theme, setTheme } = useTheme();
 
   const handleMenuToggle = () => {
     setIsMenuOpen((prev) => !prev);
@@ -109,7 +89,7 @@ function Header() {
       </nav>
       <button
         className="icon-mode active:scale-90 text-xl w-10 h-10 rounded-full border shadow-3xl duration-300 bg-bgHeaderlight dark:bg-box dark:text-opacityorange dark:hover:text-orange  text-subtitle opacity-90 hover:opacity-100 border-blue hover:border-orange hover:text-orange dark:border-opacityorange dark:hover:border-orange"
-        onClick={toggleTheme}
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         aria-label="Toggle theme"
       >
         {theme === "dark" ? (

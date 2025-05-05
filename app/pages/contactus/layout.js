@@ -7,7 +7,7 @@ import { Mail } from "lucide-react";
 const layout = () => {
   return (
     <div className="bg-seconderylight dark:bg-secondery overflow-hidden">
-      <div className=" container mx-auto ">
+      <div className=" container mx-auto my-12 ">
         <SectionTitle title={"Conatact Us"} icon={<Mail />} />
         <ContactUs />
       </div>

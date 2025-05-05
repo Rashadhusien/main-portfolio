@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,9 +16,23 @@ export const metadata = {
   description: "Front-end Developer portfolio",
 };
 
+const setInitialTheme = `
+(function() {
+  try {
+    const theme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (theme === 'dark' || (!theme && systemPrefersDark)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  } catch (_) {}
+})();
+`;
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={inter.className} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -37,17 +52,20 @@ export default function RootLayout({ children }) {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
+        <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
       </head>
       <body
         className={`antialiased bg-seconderylight dark:bg-secondery min-h-screen`}
         id="parent"
       >
-        <Analytics />
-        <div id="up" className=" ">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <ThemeProvider>
+          <Analytics />
+          <div id="up" className=" ">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
