@@ -35,13 +35,16 @@ const Skills = () => {
     <div className="wrapper" id="skills">
       {Object.entries(groupedSkills).map(([category, skills]) => (
         <div key={category} className="mb-10 ml-4">
-          <h2 className="pl-[10px] rounded-sm border-l-4 text-2xl font-bold mb-5 text-black dark:text-white capitalize">
+          <h2 className="pl-[10px] rounded-sm border-l-4 border-border dark:border-borderlight text-2xl font-bold mb-5 text-black dark:text-white capitalize">
             {category}
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5  gap-6">
             {skills.map((skill, i) => (
-              <div key={skill.id} className="text-center">
-                <div className="relative w-16 h-16 mx-auto mb-2">
+              <div
+                key={skill.id}
+                className="text-center p-2  shadow dark:bg-box rounded-md max-w-[160px] "
+              >
+                <div className="relative w-16 h-16 mx-auto mb-2 ">
                   <Image
                     fill
                     src={skill.url}

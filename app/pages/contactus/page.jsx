@@ -32,10 +32,10 @@ function ContactUs() {
         </p>
       </div>
 
-      <section className="content w-full flex gap-2 lg:gap-0 flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-between">
+      <section className="content w-full flex gap-2 lg:gap-0 flex-col-reverse md:flex-row items-start sm:items-center justify-start sm:justify-between">
         <form
           onSubmit={customSubmit}
-          className="contact flex flex-col w-full sm:w-auto"
+          className="contact flex flex-col w-full md:w-auto"
         >
           {/* Email Field */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 py-2 w-full justify-between">
@@ -106,7 +106,7 @@ function ContactUs() {
           )}
         </form>
 
-        <section className="contact-animation hidden md:block animation max-w-lg">
+        <section className="contact-animation  w-full animation  md:max-w-lg">
           {/* <Lottie animationData={contactAnimation} className="w-full h-full" /> */}
           <TerminalDemo />
         </section>

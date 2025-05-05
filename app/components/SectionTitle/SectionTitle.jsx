@@ -15,7 +15,7 @@ const SectionTitle = ({ title, icon = "" }) => {
       }}
       className="relative mb-5 text-center max-w-[350px]"
     >
-      <h3 className="text-3xl  flex items-center gap-2 px-6 py-3 rounded-md  border-l-[10px]   text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300">
+      <h3 className="text-3xl  flex items-center gap-2 px-6 py-3 rounded-md  border-l-[10px] border-border dark:border-borderlight  text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300">
         {icon}
         {title}
       </h3>

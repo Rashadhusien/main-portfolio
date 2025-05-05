@@ -21,7 +21,7 @@ const socials = [
   },
   {
     url: "https://www.linkedin.com/in/rashad-husein-2770622aa/",
-    name: "twitter",
+    name: "Linked In",
     icon: <Linkedin />,
   },
   {
@@ -120,18 +120,19 @@ function About() {
             engaging web experiences.
           </p>
         </div>
-        <ul className="icons-social flex gap-5 text-xl">
+        <ul className="icons-social grid grid-cols-2 gap-5 text-xl">
           {socials.map((social, i) => {
             const { url, icon, name } = social;
             return (
-              <li key={i}>
+              <li key={i} className="group rounded-md  overflow-hidden ">
                 <a
                   href={url}
                   target="_blank"
                   aria-label={name}
-                  className="duration-300 hover:text-xl text-lg text-black dark:text-white "
+                  className="flex  items-center gap-2 px-6 py-3 rounded-md  border-l-[10px] border-border dark:border-borderlight  text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 "
                 >
-                  {icon}
+                  <span className="min-w-[20px] min-h-[20px]">{icon}</span>{" "}
+                  <span className="text-sm sm:text-lg">{name} </span>
                 </a>
               </li>
             );
