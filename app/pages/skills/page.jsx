@@ -48,6 +48,8 @@ const Skills = () => {
                     alt={skill.name}
                     className={`object-contain ${
                       skill.name.toLowerCase() === "github" ? "dark:invert" : ""
+                    } ${
+                      skill.name.toLowerCase() === "next" ? "dark:invert" : ""
                     }`}
                   />
                 </div>

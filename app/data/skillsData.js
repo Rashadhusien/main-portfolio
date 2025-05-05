@@ -38,6 +38,13 @@ export const skillsData = [
   },
   {
     id: uuid(),
+    name: "next",
+    url: "/skills/nextjs.svg",
+    category: "Frontend",
+    level: "Beginner",
+  },
+  {
+    id: uuid(),
     name: "Redux",
     url: "/skills/redux.svg",
     category: "Frontend",
