@@ -131,6 +131,7 @@ module.exports = {
         menuscale: "menuscale 0.5s ease",
         marquee: "marquee 30s linear infinite",
         "marquee-vertical": "marquee-vertical 30s linear infinite",
+        move: "move 1s linear infinite alternate",
       },
       keyframes: {
         menuscale: {
@@ -145,6 +146,10 @@ module.exports = {
         "marquee-vertical": {
           "0%": { transform: "translateY(100%)" },
           "100%": { transform: "translateY(-100%)" },
+        },
+        move: {
+          "0% ": { transform: "translateY(5px)" },
+          "100%": { transform: "translateY(-5px)" },
         },
       },
     },

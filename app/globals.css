@@ -7,6 +7,10 @@
 @tailwind components;
 @tailwind utilities; */
 
+::selection {
+  background-color: #292c3b;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;

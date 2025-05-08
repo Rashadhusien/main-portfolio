@@ -81,7 +81,7 @@ const FilterButtons = ({ setArr }) => {
           <button
             key={btn.id}
             onClick={() => handleClick(btn.btnCategory)}
-            className={`duration-500 py-1 sm:p-3 capitalize w-32 sm:w-44 text-base rounded-xl border-2 hover:border-orange hover:text-orange bg-blueElzero  dark:hover:text-orange dark:bg-box 
+            className={`btn duration-500 py-1 sm:p-3 capitalize w-32 sm:w-44 text-base rounded-xl border-2 hover:border-orange hover:text-orange bg-blueElzero  dark:hover:text-orange dark:bg-box 
             ${
               activeCategory === btn.btnCategory
                 ? " opacity-100 font-bold tracking-tight border-orange text-orange "

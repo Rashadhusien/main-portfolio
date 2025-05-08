@@ -1,25 +1,27 @@
 "use client";
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm as useFormspree, ValidationError } from "@formspree/react";
+import { useForm as useHookForm } from "react-hook-form";
 import Lottie from "lottie-react";
 import doneAnimation from "@/app/animation/done.json";
-import contactAnimation from "@/app/animation/contact-us.json";
 import { useState } from "react";
 import { TerminalDemo } from "@/app/components/Terminal";
 
 function ContactUs() {
-  const [state, handleSubmit] = useForm("xyyrleky");
-  const [formData, setFormData] = useState({ email: "", message: "" });
+  const [state, handleSubmitToFormspree] = useFormspree("xyyrleky");
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useHookForm();
 
-  const customSubmit = async (e) => {
-    e.preventDefault();
-    setFormData({ email: "", message: "" });
+  const onSubmit = async (data) => {
+    await handleSubmitToFormspree(data);
+
     setShowSuccess(true);
+    reset();
     setTimeout(() => setShowSuccess(false), 3000);
   };
 
@@ -34,54 +36,64 @@ function ContactUs() {
 
       <section className="content w-full flex gap-2 lg:gap-0 flex-col-reverse md:flex-row items-start sm:items-center justify-start sm:justify-between">
         <form
-          onSubmit={customSubmit}
+          onSubmit={handleSubmit(onSubmit)}
           className="contact flex flex-col w-full md:w-auto"
         >
           {/* Email Field */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 py-2 w-full justify-between">
+          <div className="flex flex-col sm:flex-row gap-3 py-2 w-full">
             <label
               htmlFor="email"
               className="text-sub-title-light min-w-[116px] dark:text-subtitle"
             >
               Email Address:
             </label>
-            <input
-              required
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="inp w-full  p-2 rounded-lg duration-500 outline-none text-inputtext dark:text-white bg-bginputlight dark:bg-bginput border border-borderinputlight dark:border-borderinput focus:border-blueElzero hover:border-blueElzero dark:focus:border-orange dark:hover:border-orange"
-            />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
+            <div className="w-full">
+              <input
+                id="email"
+                type="email"
+                {...register("email", { required: "Email is required" })}
+                className="inp w-full p-2 rounded-lg border"
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.email.message}
+                </p>
+              )}
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+                className="text-red-500 text-sm mt-1"
+              />
+            </div>
           </div>
 
           {/* Message Field */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-6 py-2 duration-300 w-full justify-between">
+          <div className="flex flex-col sm:flex-row gap-3 mt-6 py-2 w-full">
             <label
               htmlFor="message"
               className="text-sub-title-light min-w-[115px] dark:text-subtitle"
             >
               Your message:
             </label>
-            <textarea
-              required
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="inp w-full resize min-h-36  rounded-lg duration-500 outline-none p-2 text-inputtext dark:text-white bg-bginputlight dark:bg-bginput border border-borderinputlight dark:border-borderinput focus:border-blueElzero hover:border-blueElzero dark:focus:border-orange dark:hover:border-orange"
-            />
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
+            <div className="w-full">
+              <textarea
+                id="message"
+                {...register("message", { required: "Message is required" })}
+                className="inp w-full resize min-h-36 p-2 rounded-lg border"
+              />
+              {errors.message && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.message.message}
+                </p>
+              )}
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+                className="text-red-500 text-sm mt-1"
+              />
+            </div>
           </div>
 
           {/* Submit Button */}
@@ -95,19 +107,18 @@ function ContactUs() {
 
           {/* Success Message */}
           {showSuccess && (
-            <h1 className="flex items-center opacity-100 duration-300 transition-all mt-4 text-green-500">
+            <div className="flex items-center mt-4 text-green-500">
               <Lottie
                 loop={false}
                 animationData={doneAnimation}
                 className="h-14"
               />
               Your message has been sent successfully!
-            </h1>
+            </div>
           )}
         </form>
 
-        <section className="contact-animation  w-full animation  md:max-w-lg">
-          {/* <Lottie animationData={contactAnimation} className="w-full h-full" /> */}
+        <section className="contact-animation hidden sm:block w-full md:max-w-lg">
           <TerminalDemo />
         </section>
       </section>

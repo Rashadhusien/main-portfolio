@@ -73,7 +73,7 @@ export const SparklesText = ({
 
   return (
     <div
-      className={cn("text-6xl font-bold", className)}
+      className={cn("my-5", className)}
       {...props}
       style={{
         "--sparkles-first-color": `${colors.first}`,
@@ -84,9 +84,7 @@ export const SparklesText = ({
         {sparkles.map((sparkle) => (
           <Sparkle key={sparkle.id} {...sparkle} />
         ))}
-        <strong className="w-full title text-3xl sm:text-4xl md:text-5xl sm:leading-[70px] font-extrabold my-6 text-primary dark:text-primarylight ">
-          {children}
-        </strong>
+        <strong className="">{children}</strong>
       </span>
     </div>
   );

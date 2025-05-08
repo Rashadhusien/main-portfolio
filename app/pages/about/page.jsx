@@ -1,4 +1,5 @@
 "use client";
+
 import Lottie from "lottie-react";
 import developer from "../../animation/developer.json";
 
@@ -25,7 +26,7 @@ const socials = [
     icon: <Linkedin />,
   },
   {
-    url: " https://wa.me/01110105367",
+    url: " https://wa.me/201110105367",
     name: "whatsapp",
     icon: <MessageCircle />,
   },
@@ -74,14 +75,14 @@ function About() {
       }}
     >
       <section className="left-section grow">
-        <div className="parent-avatar flex items-end gap-1 min-h-24">
+        <div className="parent-avatar sm:hidden flex items-end gap-1 min-h-24">
           <Image
             {...profileAnimation}
             src={profile}
             alt="me-main-section"
             width={500}
             height={500}
-            className="w-24 dark:bg-[#18181b] rounded-full p-0.5 border border-orange dark:border-orange shadow-inner cursor-pointer  duration-300 active:scale-150 hover:scale-150"
+            className="w-24  dark:bg-[#18181b] rounded-full p-0.5 border border-orange dark:border-orange shadow-inner cursor-pointer  duration-300 active:scale-150 hover:scale-150"
             onClick={() => {
               setImgpopup(true);
             }}
@@ -100,24 +101,17 @@ function About() {
         </div>
         <div className="text">
           <h1 className="title text-3xl sm:text-5xl sm:leading-[70px] font-extrabold my-6 text-primary dark:text-primarylight w-full">
-            <SparklesText className={"w-full"}>
-              {" "}
-              Front-End Developer{" "}
-            </SparklesText>
+            <SparklesText className={"w-full"}> Rashad Hussein </SparklesText>
           </h1>
+
           <p className="sub-title max-w-[1200px] mb-8 text-[#333] dark:text-[#eee] font-bold">
-            I&apos;m <strong className="text-orange ">Rashad Hussein</strong>{" "}
+            I&apos;m a{" "}
+            <strong className="text-orange ">Front-end Developer</strong>{" "}
             skilled in HTML, CSS, JavaScript, React.js, and Next.js. I build{" "}
-            <strong className="text-orange ">
-              responsive, user-friendly interfaces{" "}
-            </strong>
-            using Tailwind CSS and SCSS, turning Figma designs into clean,
-            performant code. I work with React Hooks, Redux, Firebase, and
-            Framer Motion to create{" "}
-            <strong className="text-orange ">
-              fast, accessible, and visually{" "}
-            </strong>{" "}
-            engaging web experiences.
+            responsive, user-friendly interfaces using Tailwind CSS and SCSS,
+            turning Figma designs into clean, performant code. I work with React
+            Hooks, Redux, Firebase, and Framer Motion to create fast,
+            accessible, and visually engaging web experiences.
           </p>
         </div>
         <ul className="icons-social grid grid-cols-2 gap-5 text-xl">
@@ -139,11 +133,19 @@ function About() {
           })}
         </ul>
       </section>
-      <section className="right-section animation w-full hidden sm:block">
-        <Lottie
+      <section className="right-section animation w-full hidden  sm:flex justify-center items-center">
+        {/* <Lottie
           animationData={developer}
           className="w-full h-full translate-x-14 translate-y-10"
           lottieRef={lottieRef}
+        /> */}
+        <Image
+          {...profileAnimation}
+          src={profile}
+          alt="me-main-section"
+          width={500}
+          height={500}
+          className=" dark:bg-box animate-move  flex justify-center rounded-full max-h-[400px] max-w-[400px] items-center w-full p-0.5 border border-orange dark:border-orange shadow-inner   "
         />
       </section>
     </section>

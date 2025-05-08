@@ -4,12 +4,13 @@ import Link from "next/link";
 import "./style.css";
 import { useEffect, useState } from "react";
 import { navBar } from "@/app/data/navBar";
-
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
 
   const handleMenuToggle = () => {
     setIsMenuOpen((prev) => !prev);
@@ -18,23 +19,30 @@ function Header() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlNavbar = () => {
-    if (window.scrollY > lastScrollY && window.scrollY > 160) {
-      // Scrolling down
-      setShow(false);
-    } else {
-      // Scrolling up
-      setShow(true);
-    }
-    setLastScrollY(window.scrollY);
-  };
-
   useEffect(() => {
+    const controlNavbar = () => {
+      setLastScrollY((prevY) => {
+        if (window.scrollY > prevY && window.scrollY > 160) {
+          setShow(false);
+        } else {
+          setShow(true);
+        }
+        return window.scrollY;
+      });
+    };
+
     window.addEventListener("scroll", controlNavbar);
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [lastScrollY]);
+  }, []);
+
+  const isActive = (url) => {
+    if (url === "/") {
+      return pathname === url;
+    }
+    return pathname === `/pages/${url}`;
+  };
 
   return (
     <header
@@ -61,11 +69,15 @@ function Header() {
           {navBar.map((item, i) => (
             <li
               key={i}
-              className="border-b py-3 border-border dark:border-borderlight hover:pl-1 duration-300"
+              className="border-b text-orange py-3 border-border dark:border-borderlight hover:pl-1 duration-300"
             >
               <Link
                 href={item.url != "/" ? `/pages/${item.url}` : item.url}
-                className=" hover:text-orange cursor-pointer text-titlelight dark:text-title dark:hover:text-orange transition-all duration-300 text-xl w-full block"
+                className={`hover:text-orange cursor-pointer  dark:hover:text-orange transition-all duration-300 text-xl w-full block ${
+                  isActive(item.url)
+                    ? "text-orange dark:text-orange"
+                    : "text-titlelight dark:text-title"
+                }`}
               >
                 {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
               </Link>
@@ -79,7 +91,11 @@ function Header() {
             <li key={i}>
               <Link
                 href={item.url != "/" ? `/pages/${item.url}` : item.url}
-                className="hover:text-orange  cursor-pointer opacity-90 text-sm font-medium transition-all duration-300 text-titlelight dark:text-title dark:hover:text-orange"
+                className={`hover:text-orange cursor-pointer opacity-90 text-sm font-medium transition-all duration-300  dark:hover:text-orange ${
+                  isActive(item.url)
+                    ? "text-orange dark:text-orange"
+                    : " text-titlelight dark:text-title "
+                }`}
               >
                 {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
               </Link>
